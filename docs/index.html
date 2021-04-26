@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Navbar</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="dicsobg.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <!-- Mobile Social Media Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+            integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" media="screen and (max-width: 800px)">
+
+    
+            <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+<script src="main.js"></script>
+<!-- 
+    // Social Media Icons
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    
+    // <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!--<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://kit.fontawesome.com/29e4df49ba.js" crossorigin="anonymous"></script>-->
+    
+    <!-- PopTin -->
+    <!-- <script id='pixel-script-poptin' src='https://cdn.popt.in/pixel.js?id=6ff0116108d08' async='true'></script> -->
+    <!-- PopTin -->
+    
+    <!-- Disco Background Start 
+
+<script language="JavaScript">
+//you can assign the initial color of the background here
+r=255;
+g=255;
+b=255;
+flag=0;
+t=new Array;
+o=new Array;
+d=new Array;
+
+function hex(a,c)
+{
+t[a]=Math.floor(c/16)
+o[a]=c%16
+switch (t[a])
+{
+case 10:
+t[a]='A';
+break;
+case 11:
+t[a]='B';
+break;
+case 12:
+t[a]='C';
+break;
+case 13:
+t[a]='D';
+break;
+case 14:
+t[a]='E';
+break;
+case 15:
+t[a]='F';
+break;
+default:
+break;
+}
+switch (o[a])
+{
+case 10:
+o[a]='A';
+break;
+case 11:
+o[a]='B';
+break;
+case 12:
+o[a]='C';
+break;
+case 13:
+o[a]='D';
+break;
+case 14:
+o[a]='E';
+break;
+case 15:
+o[a]='F';
+break;
+default:
+break;
+}
+}
+
+function ran(a,c)
+{
+if ((Math.random()>2/3||c==0)&&c<255)
+{
+c++
+d[a]=2;
+}
+else
+{
+if ((Math.random()<=1/2||c==255)&&c>0)
+{
+c--
+d[a]=1;
+}
+else d[a]=0;
+}
+return c
+}
+function do_it(a,c)
+{
+if ((d[a]==2&&c<255)||c==0)
+{
+c++
+d[a]=2
+}
+else
+if ((d[a]==1&&c>0)||c==255)
+{
+c--;
+d[a]=1;
+}
+if (a==3)
+{
+if (d[1]==0&&d[2]==0&&d[3]==0)
+flag=1
+}
+return c
+}
+function disco()
+{
+if (flag==0)
+{
+r=ran(1, r);
+g=ran(2, g);
+b=ran(3, b);
+hex(1,r)
+hex(2,g)
+hex(3,b)
+document.body.style.background="#"+t[1]+o[1]+t[2]+o[2]+t[3]+o[3]
+flag=50
+}
+else
+{
+r=do_it(1, r)
+g=do_it(2,g)
+b=do_it(3,b)
+hex(1,r)
+hex(2,g)
+hex(3,b)
+document.body.style.background="#"+t[1]+o[1]+t[2]+o[2]+t[3]+o[3]
+flag--
+}
+
+setTimeout('disco()',50)
+}
+
+</script>
+         Disco Background End -->
+</head>
+
+<body background="xp_wallpaper.jpg" onload="disco()">
+    <header>
+        <a class="logo" href="#"><img src="logo.png" alt="logo"></a>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="project.html" target="blank">Projects</a></li>
+                <li><a href="#">About</a></li>
+                <!-- <li><a href="https://form.jotform.com/jsform/211143071047442">Contact Us</a></li> -->
+                <!-- Contact Us form {jotform} link -->
+                <!--<a href="javascript:void(
+      window.open(
+        'https://form.jotform.com/211143071047442',
+        'blank',
+        'scrollbars=yes,
+        toolbar=no,
+        width=800,
+        height=800'
+      )
+    )
+  ">
+    Contact Us
+  </a> -->
+                <!--w,h:700,500-->
+                <!--<li><a href="#">Dark-Mode</a></li>-->
+            </ul>
+        </nav>
+        <a class="cta" href="javascript:void(
+            window.open(
+              'https://form.jotform.com/211143071047442',
+              'blank',
+              'scrollbars=yes,
+              toolbar=no,
+              width=800,
+              height=800'
+            )
+          )
+        ">Contact</a>
+        <p class="menu cta">Menu</p>
+    </header>
+    <div id="mobile__menu" class="overlay">
+        <a class="close">&times;</a>
+        <div class="overlay__content">
+            <!--<a href="#">Services</a>-->
+            <a href="project.html">Projects</a>
+            <a href="#">About</a>
+            <!-- <a href="#">Contact</a> -->
+            <a href="javascript:void(
+      window.open(
+        'https://form.jotform.com/211143071047442',
+        'blank',
+        'scrollbars=yes,
+        toolbar=no,
+        width=800,
+        height=800'
+      )
+    )
+  ">
+                Contact Us
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+    <!--Floating Social Meida Navigation Bar-->
+    <!--
+<float_nav>
+      <ul>
+	<li><a href="#"><i class="fab fa-facebook-f"></i><span>Facebook</span></a></li>
+	<li><a href="#"><i class="fab fa-twitter"></i><span>Twitter</span></a></li>
+	<li><a href="#"><i class="fab fa-instagram"></i><span>Instagram</span></a></li>
+	<li><a href="#"><i class="fab fa-linkedin-in"></i><span>Linkedin</span></a></li>
+	<li><a href="#"><i class="fab fa-github"></i><span>Github</span></a></li>
+	<li><a href="#"><i class="fab fa-youtube"></i><span>Youtube</span></a></li>
+      </ul>
+</float_nav>
+-->
+
+    <script type="text/javascript" src="mobile.js"></script>
+
+    <!-- Main Image Start Here... -->
+    <!-- <img src="mainImg.jpg" alt="Nature" class="imgrsp"> </img> -->
+    <!-- Main Image End Here... -->
+
+    <!--
+<div id="frame">
+<style>
+	#frame { 
+		position:absolute; top:80px; bottom:50px; right:10px;
+	width:250px; height:1080px; background-color:pink; color:black; 
+	}
+</style>
+-->
+    <!--
+<p>This is a Paragraph Tag...This is a Paragraph Tag...This is a Paragraph Tag...</p>
+<p>This is a Paragraph Tag...This is a Paragraph Tag...This is a Paragraph Tag...</p>
+<p>This is a Paragraph Tag...This is a Paragraph Tag...This is a Paragraph Tag...</p>
+<p>This is a Paragraph Tag...This is a Paragraph Tag...This is a Paragraph Tag...</p>
+<p>This is a Paragraph Tag...This is a Paragraph Tag...This is a Paragraph Tag...</p>
+<p>This is a Paragraph Tag...This is a Paragraph Tag...This is a Paragraph Tag...</p>
+<p>This is a Paragraph Tag...This is a Paragraph Tag...This is a Paragraph Tag...</p>
+<p>This is a Paragraph Tag...This is a Paragraph Tag...This is a Paragraph Tag...</p>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+<p>This is a Paragraph Tag...This is a Paragraph Tag...This is a Paragraph Tag...</p>
+<p>This is a Paragraph Tag...This is a Paragraph Tag...This is a Paragraph Tag...</p>
+<p>This is a Paragraph Tag...This is a Paragraph Tag...This is a Paragraph Tag...</p>
+<p>This is a Paragraph Tag...This is a Paragraph Tag...This is a Paragraph Tag...</p>
+<p>This is a Paragraph Tag...This is a Paragraph Tag...This is a Paragraph Tag...</p>
+<p>This is a Paragraph Tag...This is a Paragraph Tag...This is a Paragraph Tag...</p>
+<p>This is a Paragraph Tag...This is a Paragraph Tag...This is a Paragraph Tag...</p>
+<p>This is a Paragraph Tag...This is a Paragraph Tag...This is a Paragraph Tag...</p>
+-->
+    <!-- <p>This is a Paragraph Tag...This is a Paragraph Tag...This is a Paragraph Tag...</p>
+<p>This is a Paragraph Tag...This is a Paragraph Tag...This is a Paragraph Tag...</p>
+<p>This is a Paragraph Tag...This is a Paragraph Tag...This is a Paragraph Tag...</p>
+<p>This is a Paragraph Tag...This is a Paragraph Tag...This is a Paragraph Tag...</p>
+<p>This is a Paragraph Tag...This is a Paragraph Tag...This is a Paragraph Tag...</p>
+<p>This is a Paragraph Tag...This is a Paragraph Tag...This is a Paragraph Tag...</p>
+<p>This is a Paragraph Tag...This is a Paragraph Tag...This is a Paragraph Tag...</p>
+<p>This is a Paragraph Tag...This is a Paragraph Tag...This is a Paragraph Tag...</p>
+<p>End here...</p>
+</div> -->
+
+    <div class="divcontent">
+        <div class="card">
+
+            <maintext>
+                <h1 align="center">harshtech.me</h1>
+
+                <div class="glow">
+                    <span class="minor">I'm</span>
+                    <span class="major">Harsh Soni</span>
+                    <span class="small-minor">A Passionate Developer</span>
+
+                </div>
+            </maintext>
+
+        </div>
+    </div>
+
+    <socialMedia>
+        <ul>
+            <li><a href="#"><i class="fas fa-link" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fab fa-stack-overflow" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+        </ul>
+    </socialMedia>
+
+    <!-- Mobile Social Media -->
+    <mob>
+        
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-stack-overflow"></i>
+                </a>
+
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+        </ul>
+    </mob>
+    <!-- Mobile Social Media -->
+
+
+
+    <!-- stars background start  -->
+    <div>
+        <div class="stars-01"></div>
+        <div class="stars-02"></div>
+        <div class="stars-03"></div>
+        <div class="stars-04"></div>
+    </div>
+    <!-- Stars background end  -->
+
+    <div class="footer">
+        <div id="container">
+            <div class="sign-three">
+                <div class="jackpots">Open for Collab!</div>
+            </div>
+        </div>
+        <!-- Customerly Live Chat Snippet Code -->
+        <script>
+            !function () { var e = window, i = document, t = "customerly", n = "queue", o = "load", r = "settings", u = e[t] = e[t] || []; if (u.t) { return void u.i("[customerly] SDK already initialized. Snippet included twice.") } u.t = !0; u.loaded = !1; u.o = ["event", "attribute", "update", "show", "hide", "open", "close"]; u[n] = []; u.i = function (t) { e.console && !u.debug && console.error && console.error(t) }; u.u = function (e) { return function () { var t = Array.prototype.slice.call(arguments); return t.unshift(e), u[n].push(t), u } }; u[o] = function (t) { u[r] = t || {}; if (u.loaded) { return void u.i("[customerly] SDK already loaded. Use customerly.update to change settings.") } u.loaded = !0; var e = i.createElement("script"); e.type = "text/javascript", e.async = !0, e.src = "https://messenger.customerly.io/launcher.js"; var n = i.getElementsByTagName("script")[0]; n.parentNode.insertBefore(e, n) }; u.o.forEach(function (t) { u[t] = u.u(t) }) }();
+
+            customerly.load({
+                "app_id": "7a1d5cab"
+            });
+        </script>
+        <!-- End of Customerly Live Chat Snippet Code -->
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

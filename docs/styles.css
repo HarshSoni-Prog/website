@@ -1,0 +1,885 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+/* background-color: #660000; //1a0000 */
+background-attachment: fixed;
+overflow-y: scroll;
+overflow-x: hidden;
+}
+/* Scroll Bar Start here */
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,0,0,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,0.4); 
+}
+/* Scroll Bar End here*/
+
+header {
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 10%;
+  background-color: #24252a;
+  position: fixed;
+  width: calc(100% - 0%)
+  
+}
+.imgrsp {
+  width: 100%;
+  margin-top: 1em;
+  padding-left: 30px;
+  padding-top: 50px;
+  /* top | right | bottom | left */
+  /* margin: 0 auto 10% 10%; */
+  height: auto;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+}
+
+.nav__links a,
+.cta,
+.overlay__content a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+.nav__links li {
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: #0088a9;
+}
+
+.cta {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.cta:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+/* Mobile Nav */
+
+.menu {
+  display: none;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #24252a;
+  overflow-x: hidden;
+  transition: all 0.5s ease 0s;
+}
+
+.overlay--active {
+  width: 100%;
+}
+
+.overlay__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: all 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #0088a9;
+}
+.overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: #edf0f1;
+  cursor: pointer;
+}
+
+
+
+
+
+
+/*
+@media screen and (max-width: 600px) {
+  float_nav {
+    display: none;
+  }
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+float_nav ul{
+  margin: 0;
+  padding: 0;
+  position: sticky;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+float _nav body{
+  font-family: 'Montserrat', sans-serif;
+  background: url(bg.jpeg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+float_nav{
+  position: fixed;
+  width: 70px;
+  margin-top: 150px;
+  transition: all 0.3s linear;
+  box-shadow: 2px 2px 8px 0px rgba(0,0,0,.4);
+}
+float_nav li{
+  height: 60px;
+  position:relative;
+}
+float_nav li a{
+  color: white;
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 60px;
+  padding-left:25%;
+  border-bottom: 1px solid rgba(0,0,0,.4);
+  transition: all .3s linear;
+}
+float_nav li:nth-child(1) a{
+  background: #4267B2;
+}
+float_nav li:nth-child(2) a{
+  background: #1DA1F2;
+}
+float_nav li:nth-child(3) a{
+  background: #E1306C;
+}
+float_nav li:nth-child(4) a{
+  background: #2867B2;
+}
+float_nav li:nth-child(5) a{
+  background: #333;
+}
+float_nav li:nth-child(6) a{
+  background: #ff0000;
+}
+float_nav li a i{
+  position:absolute;
+  top: 17px;
+  left: 20px;
+  font-size: 27px;
+}
+float_nav ul li a span{
+  display: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+float_nav a:hover {
+  z-index:1;
+  width: 200px;
+  border-bottom: 1px solid rgba(0,0,0,.5);
+  box-shadow: 0 0 1px 1px rgba(0,0,0,.3);
+}
+float_nav ul li:hover a span{
+  padding-left: 30%;
+  display: block;
+}
+*/
+
+.divcontent{
+  width: (100% -250px);
+  /* margin-top: 40px; */
+  padding-top: 10px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  margin-left: 80px;
+  /* background: url(logo.png) no-repeat; */
+  background-position: center;
+  background-size: cover; 
+  height: 100vh;
+  transition: 0.5s;
+  position: relative;
+  text-align: center;
+}
+
+
+.card p{
+  background-color: transparent;
+  padding: 20px;
+  padding-top: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+
+  margin-top: 0px; 
+  margin-bottom: 100px;
+  margin-right: 50px;
+  margin-left: 100px;
+  z-index: -1; 
+  margin-bottom: 10px;
+  font-size: 20px;
+  opacity: 0.6;
+  position: relative;
+  text-align: center;
+}
+
+/* Main Text */
+maintext h1 {
+  font-size: 3rem;
+  /* margin-top: 10%; */
+  margin-bottom: 5%; 
+  margin-top:15vh; 
+  color: white;
+  font-family: 'Merienda', cursive;
+  animation-name: glow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0px 0px 5px #fff, 0px 0px 5px #614ad3;
+ }
+  to {
+    text-shadow: 0px 0px 20px #fff, 0px 0px 20px #614ad3;
+ }
+}
+.glow {
+  /* margin-bottom: 30%; 100px */
+  text-align: center;
+}
+.glow span {
+  color: #fff;
+  text-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 20px #0ba9ca, 0 0 30px #0ba9ca, 0 0 40px #0ba9ca, 0 0 50px #0ba9ca;
+  animation: blink 1.5s infinite alternate;
+}
+.glow .major {
+  display: block;
+  font-size: 80px;
+  text-align: center;
+}
+.glow .minor {
+  display: block;
+  font-size: 30px;
+  text-align: center;
+}
+.glow .small-minor {
+  display: block;
+  font-size: 20px;
+  text-align: center;
+}
+@keyframes blink {
+  100% {
+    text-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ba9ca, 0 0 70px #0ba9ca, 0 0 80px #0ba9ca;
+ }
+}
+
+
+/* Main Text*/
+
+
+
+/* SocialMedia */
+socialMedia body{
+  margin: 0;
+  padding: 0;
+  background-color: #ccc;
+  }
+  socialMedia ul{
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  
+  }
+  socialMedia ul li{
+  list-style: none;
+  margin: 0 40px;
+  
+  }
+  socialMedia ul li .fa{
+  font-size: 40px;
+  color: #262626;
+  line-height: 80px;
+  transition: .5s;
+  
+  }
+  socialMedia ul li a{
+  position: relative;
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  text-align: center;
+  transform: perspective(100px) rotate(-30deg) skew(25deg) translate(0,0);
+  transition: .5s;
+  box-shadow: -20px 20px 10px rgb(0, 0, 0, 0.5);
+  }
+  socialMedia ul li a::before{
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  height: 100%;
+  width: 20px;
+  background: #b1b1b1;
+  transition: .5s;
+  transform: rotate(0deg) skewY(-45deg);
+  }
+  socialMedia ul li a::after{
+  content: "";
+  position: absolute;
+  top: 80px;
+  left: -11px;
+  height: 20px;
+  width: 100%;
+  background: #b1b1b1;
+  transition: .5s;
+  transform: rotate(0deg) skewX(-45deg);
+  }
+  socialMedia ul li a:hover{
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+  box-shadow: -50px 50px 50px rgb(0, 0, 0, 0.5);
+  }
+  socialMedia ul li:hover .fa{
+  color: #fff;
+  }
+  socialMedia ul li a:hover{
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+  box-shadow: -50px 50px 50px rgb(0, 0, 0, 0.5);
+  }
+  socialMedia ul li:hover:nth-child(1) a{
+  background: #3b5999;
+  }
+  
+  socialMedia ul li:hover:nth-child(1) a:before{
+  background: #2e4a86;
+  }
+  socialMedia ul li:hover:nth-child(1) a:after{
+  background: #4a69ad;
+  }
+  socialMedia ul li:hover:nth-child(2) a{
+  background: #55acee;
+  }
+  socialMedia ul li:hover:nth-child(2) a:before{
+  background: #4184b7;
+  }
+  socialMedia ul li:hover:nth-child(2) a:after{
+  background: #4d9fde;
+  }
+  socialMedia ul li:hover:nth-child(3) a{
+  background: #dd4b39;
+  }
+  
+  socialMedia ul li:hover:nth-child(3) a:before{
+  background: #c13929;
+  }
+  socialMedia ul li:hover:nth-child(3) a:after{
+  background: #e83322;
+  }
+  
+  socialMedia ul li:hover:nth-child(4) a{
+  background: #0077B5;
+  }
+  
+  socialMedia ul li:hover:nth-child(4) a:before{
+  background: #036aa0;
+  }
+  socialMedia ul li:hover:nth-child(4) a:after{
+  background: #0d82bf;
+  }
+  
+  socialMedia ul li:hover:nth-child(5) a{
+  background: linear-gradient(#400080, transparent), linear-gradient(200deg, #d047d1, #ff0000, #ffff00);
+  }
+  
+  socialMedia ul li:hover:nth-child(5) a:before{
+  background: linear-gradient(#400080, transparent), linear-gradient(200deg, #d047d1, #ff0000, #ffff00);
+  }
+  socialMedia ul li:hover:nth-child(5) a:after{
+  background: linear-gradient(#400080, transparent), linear-gradient(200deg, #d047d1, #ff0000, #ffff00);
+  }
+/* SocialMedia */
+
+/* icon: https://fortawesome.github.io/Font-Awesome/icons/ */
+/* Animation: https://daneden.github.io/animate.css/ */
+
+@import url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+
+@font-face {
+  font-family: moon;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/moon.ttf);
+}
+
+.jackpots {
+  animation: jackpots 1s 0s ease infinite;
+  -moz-animation: jackpots 1s 0s ease infinite;
+  /* Firefox */
+  -webkit-animation: jackpots 1s 0s ease infinite;
+  /* Safari and Chrome */
+  -o-animation: jackpots 1s 0s ease infinite;
+  /* Opera */
+  
+    font-family: moon;
+    font-size: 35px; /*6.3vw*/
+    margin-left: 1.5vw;
+  
+}
+@keyframes jackpots {
+  0%,
+  100% {
+  text-shadow: 
+  -.1vw 0vw .1vw #FED128, -.15vw 0vw .2vw #FED128, -.2vw 0vw .2vw #FED128, 
+  -.1vw 0vw 3vw #F0130B, -.2vw 0vw 3vw #F0130B, -.4vw 0vw 3vw #F0130B,
+  -.1vw 0vw 5vw #F0130B, -.2vw 0vw 5vw #F0130B, -.4vw 0vw .8vw #F0130B, .2vw 0vw 10vw #F0130B;
+    color: #FED128;
+  }
+  50% {
+  text-shadow: 
+  -.1vw 0vw .1vw #705C12, -.15vw 0vw .2vw #705C12, -.2vw 0vw .2vw #705C12, 
+  -.1vw 0vw .1vw #5C0704, -.2vw 0vw .1vw #5C0704, -.4vw 0vw .1vw #5C0704,
+  -.1vw 0vw .2vw #5C0704, -.2vw 0vw .2vw #5C0704, -.4vw 0vw .2vw #5C0704, .2vw 0vw .5vw #5C0704;
+    color: #705C12;
+  }
+}
+
+@keyframes jackpots {
+  0%,
+  100% {
+  text-shadow: 
+  -.1vw 0vw .1vw #FED128, -.15vw 0vw .2vw #FED128, -.2vw 0vw .2vw #FED128, 
+  -.1vw 0vw 3vw #F0130B, -.2vw 0vw 3vw #F0130B, -.4vw 0vw 3vw #F0130B,
+  -.1vw 0vw 5vw #F0130B, -.2vw 0vw 5vw #F0130B, -.4vw 0vw .8vw #F0130B, .2vw 0vw 10vw #F0130B;
+    color: #FED128;
+  }
+  50% {
+  text-shadow: 
+  -.1vw 0vw .1vw #705C12, -.15vw 0vw .2vw #705C12, -.2vw 0vw .2vw #705C12, 
+  -.1vw 0vw .1vw #5C0704, -.2vw 0vw .1vw #5C0704, -.4vw 0vw .1vw #5C0704,
+  -.1vw 0vw .2vw #5C0704, -.2vw 0vw .2vw #5C0704, -.4vw 0vw .2vw #5C0704, .2vw 0vw .5vw #5C0704;
+    color: #705C12;
+  }
+}
+.sign-three {
+  margin-left: -4vw;
+  margin-right: -4vw;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+
+
+mob ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+mob ul li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+mob ul li a {
+  position: relative; 
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 63px;
+  background: black;
+  border-radius: 50%;
+  font-size: 30px;
+  color: white;
+  transition: .5s;
+}
+
+mob ul li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #7cff10; /*ffee10*/
+  transition: .5s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+mob ul li a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffee10;
+}
+
+mob ul li a:hover {
+  color: #ffee10;
+  box-shadow: 0 0 5px #ffee10;
+  text-shadow: 0 0 5px #ffee10;
+}
+
+
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Image End */
+
+
+
+.footer {
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  background-color: transparent;
+  color: green;
+  text-align: center;
+  margin: auto;
+}
+
+
+
+
+
+/* CSS for background animation */
+
+.stars-01{
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  box-shadow: 100px 200px #FFEB3B, 200px 250px #FF9800, 200px 500px #00BCD4, 300px 300px #009688,
+              550px 150px #00BCD4, 550px 300px #2196F3, 350px 500px #FFF, 1750px 150px #00BCD4,
+              1000px 400px #673AB7, 650px 450px #03A9F4, 1200px 50px #FF5722, 1100px 450px #673AB7,
+              950px 50px #00BCD4, 1100px 500px #03A9F4, 850px 400px #FF9800, 850px 300px #F44336,
+              1200px 100px #FF9800, 900px 300px #CDDC39, 1150px 400px #F44336, 1650px 900px #00BCD4,
+              650px 600px #FF5722, 350px 600px #009688, 600px 650px #E91E63, 150px 750px #00BCD4,
+              1750px 450px #FF5722, 250px 800px #00BCD4, 1800px 1150px #FF9800, 450px 1450px #FF5722,
+              1150px 800px #00BCD4, 100px 700px #3F51B5, 350px 650px #FFEB3B, 250px 600px #FF5722,
+              1850px 700px #CDDC39, 1650px 600px #FFEB3B, 450px 1050px #673AB7, 1550px 500px #F44336,
+              150px 1400px #8BC34A, 800px 800px #9C27B0, 1250px 1950px #9C27B0, 100px 1700px #8BC34A,
+              1150px 1350px #E91E63, 1700px 50px #FFF, 1750px 500px #F44336, 300px 1100px #CDDC39,
+              350px 1650px #009688, 1700px 1200px #F44336, 450px 800px #FF5722, 2000px 500px #8BC34A,
+              350px 1600px #F44336, 1350px 1350px #673AB7, 1100px 1750px #3F51B5, 150px 950px #FFEB3B,
+              1600px 1700px #2196F3, 400px 1000px #FF9800, 650px 1050px #4CAF50, 2000px 1650px #00BCD4,
+              1100px 700px #9C27B0, 1350px 600px #F44336, 600px 1900px #CDDC39, 1500px 600px #9E9E9E,
+              20px 1350px #8BC34A, 850px 1800px #E91E63, 450px 1150px #2196F3, 50px 700px #FF5722,
+              100px 1400px #F44336, 1000px 1700px #9C27B0, 250px 600px #FF5722, 1200px 850px #CDDC39,
+              1750px 20px #673AB7, 100px 1550px #FFEB3B, 1200px 1650px #3F51B5, 1500px 700px #2196F3,
+              1800px 600px #03A9F4, 650px 800px #00BCD4, 700px 600px #00BCD4, 1100px 1350px #F44336,
+              900px 550px #FF5722, 1600px 800px #2196F3, 1000px 1100px #F44336, 1650px 1350px #FF5722,
+              750px 1050px #FFC107, 1750px 800px #CDDC39, 600px 1650px #F44336, 150px 1550px #673AB7,
+              250px 1800px #FFF, 1100px 1700px #FFC107, 800px 1500px #3F51B5, 1100px 1200px #FF5722,
+              1450px 1600px #CDDC39, 150px 1400px #FFF, 1200px 1450px #03A9F4, 1800px 1050px #FFF,
+              1250px 1300px #CDDC39, 1000px 1000px #4CAF50, 300px 700px #4CAF50, 100px 1250px #9C27B0,
+              700px 1750px #00BCD4, 1950px 250px #FFF, 1550px 700px #F44336;
+  animation: starsUp 10s linear infinite;
+}
+
+.stars-02{
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  box-shadow: 100px 200px #FFEB3B, 200px 250px #FF9800, 200px 500px #00BCD4, 300px 300px #009688,
+              550px 150px #00BCD4, 550px 300px #2196F3, 350px 500px #FFF, 1750px 150px #00BCD4,
+              1000px 400px #673AB7, 650px 450px #03A9F4, 1200px 50px #FF5722, 1100px 450px #673AB7,
+              950px 50px #00BCD4, 1100px 500px #03A9F4, 850px 400px #FF9800, 850px 300px #F44336,
+              1200px 100px #FF9800, 900px 300px #CDDC39, 1150px 400px #F44336, 1650px 900px #00BCD4,
+              650px 600px #FF5722, 350px 600px #009688, 600px 650px #E91E63, 150px 750px #00BCD4,
+              1750px 450px #FF5722, 250px 800px #00BCD4, 1800px 1150px #FF9800, 450px 1450px #FF5722,
+              1150px 800px #00BCD4, 100px 700px #3F51B5, 350px 650px #FFEB3B, 250px 600px #FF5722,
+              1850px 700px #CDDC39, 1650px 600px #FFEB3B, 450px 1050px #673AB7, 1550px 500px #F44336,
+              150px 1400px #8BC34A, 800px 800px #9C27B0, 1250px 1950px #9C27B0, 100px 1700px #8BC34A,
+              1150px 1350px #E91E63, 1700px 50px #FFF, 1750px 500px #F44336, 300px 1100px #CDDC39,
+              350px 1650px #009688, 1700px 1200px #F44336, 450px 800px #FF5722, 2000px 500px #8BC34A,
+              350px 1600px #F44336, 1350px 1350px #673AB7, 1100px 1750px #3F51B5, 150px 950px #FFEB3B,
+              1600px 1700px #2196F3, 400px 1000px #FF9800, 650px 1050px #4CAF50, 2000px 1650px #00BCD4,
+              1100px 700px #9C27B0, 1350px 600px #F44336, 600px 1900px #CDDC39, 1500px 600px #9E9E9E,
+              20px 1350px #8BC34A, 850px 1800px #E91E63, 450px 1150px #2196F3, 50px 700px #FF5722,
+              100px 1400px #F44336, 1000px 1700px #9C27B0, 250px 600px #FF5722, 1200px 850px #CDDC39,
+              1750px 20px #673AB7, 100px 1550px #FFEB3B, 1200px 1650px #3F51B5, 1500px 700px #2196F3,
+              1800px 600px #03A9F4, 650px 800px #00BCD4, 700px 600px #00BCD4, 1100px 1350px #F44336,
+              900px 550px #FF5722, 1600px 800px #2196F3, 1000px 1100px #F44336, 1650px 1350px #FF5722,
+              750px 1050px #FFC107, 1750px 800px #CDDC39, 600px 1650px #F44336, 150px 1550px #673AB7,
+              250px 1800px #FFF, 1100px 1700px #FFC107, 800px 1500px #3F51B5, 1100px 1200px #FF5722,
+              1450px 1600px #CDDC39, 150px 1400px #FFF, 1200px 1450px #03A9F4, 1800px 1050px #FFF,
+              1250px 1300px #CDDC39, 1000px 1000px #4CAF50, 300px 700px #4CAF50, 100px 1250px #9C27B0,
+              700px 1750px #00BCD4, 1950px 250px #FFF, 1550px 700px #F44336;
+  animation: starsUp 30s linear infinite;
+}
+
+.stars-03{
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  box-shadow: 100px 200px #FFEB3B, 200px 250px #FF9800, 200px 500px #00BCD4, 300px 300px #009688,
+              550px 150px #00BCD4, 550px 300px #2196F3, 350px 500px #FFF, 1750px 150px #00BCD4,
+              1000px 400px #673AB7, 650px 450px #03A9F4, 1200px 50px #FF5722, 1100px 450px #673AB7,
+              950px 50px #00BCD4, 1100px 500px #03A9F4, 850px 400px #FF9800, 850px 300px #F44336,
+              1200px 100px #FF9800, 900px 300px #CDDC39, 1150px 400px #F44336, 1650px 900px #00BCD4,
+              650px 600px #FF5722, 350px 600px #009688, 600px 650px #E91E63, 150px 750px #00BCD4,
+              1750px 450px #FF5722, 250px 800px #00BCD4, 1800px 1150px #FF9800, 450px 1450px #FF5722,
+              1150px 800px #00BCD4, 100px 700px #3F51B5, 350px 650px #FFEB3B, 250px 600px #FF5722,
+              1850px 700px #CDDC39, 1650px 600px #FFEB3B, 450px 1050px #673AB7, 1550px 500px #F44336,
+              150px 1400px #8BC34A, 800px 800px #9C27B0, 1250px 1950px #9C27B0, 100px 1700px #8BC34A,
+              1150px 1350px #E91E63, 1700px 50px #FFF, 1750px 500px #F44336, 300px 1100px #CDDC39,
+              350px 1650px #009688, 1700px 1200px #F44336, 450px 800px #FF5722, 2000px 500px #8BC34A,
+              350px 1600px #F44336, 1350px 1350px #673AB7, 1100px 1750px #3F51B5, 150px 950px #FFEB3B,
+              1600px 1700px #2196F3, 400px 1000px #FF9800, 650px 1050px #4CAF50, 2000px 1650px #00BCD4,
+              1100px 700px #9C27B0, 1350px 600px #F44336, 600px 1900px #CDDC39, 1500px 600px #9E9E9E,
+              20px 1350px #8BC34A, 850px 1800px #E91E63, 450px 1150px #2196F3, 50px 700px #FF5722,
+              100px 1400px #F44336, 1000px 1700px #9C27B0, 250px 600px #FF5722, 1200px 850px #CDDC39,
+              1750px 20px #673AB7, 100px 1550px #FFEB3B, 1200px 1650px #3F51B5, 1500px 700px #2196F3,
+              1800px 600px #03A9F4, 650px 800px #00BCD4, 700px 600px #00BCD4, 1100px 1350px #F44336,
+              900px 550px #FF5722, 1600px 800px #2196F3, 1000px 1100px #F44336, 1650px 1350px #FF5722,
+              750px 1050px #FFC107, 1750px 800px #CDDC39, 600px 1650px #F44336, 150px 1550px #673AB7,
+              250px 1800px #FFF, 1100px 1700px #FFC107, 800px 1500px #3F51B5, 1100px 1200px #FF5722,
+              1450px 1600px #CDDC39, 150px 1400px #FFF, 1200px 1450px #03A9F4, 1800px 1050px #FFF,
+              1250px 1300px #CDDC39, 1000px 1000px #4CAF50, 300px 700px #4CAF50, 100px 1250px #9C27B0,
+              700px 1750px #00BCD4, 1950px 250px #FFF, 1550px 700px #F44336;
+  animation: starsUp 50s linear infinite;
+}
+
+.stars-04{
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  box-shadow: 100px 200px #FFEB3B, 200px 250px #FF9800, 200px 500px #00BCD4, 300px 300px #009688,
+              550px 150px #00BCD4, 550px 300px #2196F3, 350px 500px #FFF, 1750px 150px #00BCD4,
+              1000px 400px #673AB7, 650px 450px #03A9F4, 1200px 50px #FF5722, 1100px 450px #673AB7,
+              950px 50px #00BCD4, 1100px 500px #03A9F4, 850px 400px #FF9800, 850px 300px #F44336,
+              1200px 100px #FF9800, 900px 300px #CDDC39, 1150px 400px #F44336, 1650px 900px #00BCD4,
+              650px 600px #FF5722, 350px 600px #009688, 600px 650px #E91E63, 150px 750px #00BCD4,
+              1750px 450px #FF5722, 250px 800px #00BCD4, 1800px 1150px #FF9800, 450px 1450px #FF5722,
+              1150px 800px #00BCD4, 100px 700px #3F51B5, 350px 650px #FFEB3B, 250px 600px #FF5722,
+              1850px 700px #CDDC39, 1650px 600px #FFEB3B, 450px 1050px #673AB7, 1550px 500px #F44336,
+              150px 1400px #8BC34A, 800px 800px #9C27B0, 1250px 1950px #9C27B0, 100px 1700px #8BC34A,
+              1150px 1350px #E91E63, 1700px 50px #FFF, 1750px 500px #F44336, 300px 1100px #CDDC39,
+              350px 1650px #009688, 1700px 1200px #F44336, 450px 800px #FF5722, 2000px 500px #8BC34A,
+              350px 1600px #F44336, 1350px 1350px #673AB7, 1100px 1750px #3F51B5, 150px 950px #FFEB3B,
+              1600px 1700px #2196F3, 400px 1000px #FF9800, 650px 1050px #4CAF50, 2000px 1650px #00BCD4,
+              1100px 700px #9C27B0, 1350px 600px #F44336, 600px 1900px #CDDC39, 1500px 600px #9E9E9E,
+              20px 1350px #8BC34A, 850px 1800px #E91E63, 450px 1150px #2196F3, 50px 700px #FF5722,
+              100px 1400px #F44336, 1000px 1700px #9C27B0, 250px 600px #FF5722, 1200px 850px #CDDC39,
+              1750px 20px #673AB7, 100px 1550px #FFEB3B, 1200px 1650px #3F51B5, 1500px 700px #2196F3,
+              1800px 600px #03A9F4, 650px 800px #00BCD4, 700px 600px #00BCD4, 1100px 1350px #F44336,
+              900px 550px #FF5722, 1600px 800px #2196F3, 1000px 1100px #F44336, 1650px 1350px #FF5722,
+              750px 1050px #FFC107, 1750px 800px #CDDC39, 600px 1650px #F44336, 150px 1550px #673AB7,
+              250px 1800px #FFF, 1100px 1700px #FFC107, 800px 1500px #3F51B5, 1100px 1200px #FF5722,
+              1450px 1600px #CDDC39, 150px 1400px #FFF, 1200px 1450px #03A9F4, 1800px 1050px #FFF,
+              1250px 1300px #CDDC39, 1000px 1000px #4CAF50, 300px 700px #4CAF50, 100px 1250px #9C27B0,
+              700px 1750px #00BCD4, 1950px 250px #FFF, 1550px 700px #F44336;
+  animation: starsUp 100s linear infinite;
+}
+
+@keyframes starsUp{
+  0%{
+    transform: translateY(500px);
+  }
+  100%{
+    transform: translateY(-2000px);
+  }
+}
+
+
+
+
+
+/* Media Queries:
+    max-width: less than or equal to
+    min-width: greater than or equal to
+ */
+
+/* Big landscape tablets, laptops, desktops*/
+@media (max-width: 1370px) and (min-width: 900px) {
+  mob{
+    display: none;
+  }
+}
+
+/* between 900 and 800*/
+@media (max-width:900px) and (min-width:750px) {
+  mob{
+    display: none;
+  }
+}
+
+
+/* tablet, landscape, low-resolution laptop, desktop */
+@media (max-width: 749px){
+  socialMedia{
+    display: none;
+  }
+}
+
+/*Portrait tablet, e-readers, kindle*/
+@media only screen and (max-width: 800px) {
+  .nav__links,
+  .cta {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+  
+} 
+
+
+@media screen and (max-height: 700px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+  .wrapper{
+    display: none;
+  }
+
+}
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+  .wrapper{
+    display: none;
+  }
+}
+
+
+
+
+/*Smartphones, Android Phones, Landscape iphones*/
+@media (max-width: 600px){
+  .responsive {
+    width: 100%;
+  }
+  .wrapper{
+    display: none;
+  }
+  socialMedia{
+    display: none;
+  }
+  .glow .major {
+    display: block;
+    font-size: 50px;
+    text-align: center;
+  }
+  .glow .minor {
+    display: block;
+    font-size: 30px;
+    text-align: center;
+  }
+  .glow .small-minor {
+    display: block;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+  .wrapper{
+    display: none;
+  }
+  socialMedia{
+    display: none;
+  }
+  .glow .major {
+    display: block;
+    font-size: 50px;
+    text-align: center;
+  }
+  .glow .minor {
+    display: block;
+    font-size: 30px;
+    text-align: center;
+  }
+  .glow .small-minor {
+    display: block;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+}
+
